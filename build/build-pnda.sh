@@ -39,6 +39,7 @@
 
 MODE=${1}
 ARG=${2}
+token=${3}
 export BUILD_DIR=${PWD}
 export DISTRO=$(cat /etc/*-release|grep ^ID\=|awk -F\= {'print $2'}|sed s/\"//g)
 if [[ "${DISTRO}" == "rhel" ]]; then
